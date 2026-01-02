@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendee Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>🎟️ Event Platform</h2>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<div class="container">
+    <h3>Available Events</h3>
+    <div id="events-container"></div>
+
+    <h3>Your Ticket QR</h3>
+    <div id="qr-container"></div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

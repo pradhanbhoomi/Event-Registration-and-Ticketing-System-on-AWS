@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Event Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth">
+
+    <nav class="navbar">
+        <h2>🎟️ Event Platform</h2>
+    </nav>
+
+    <div class="auth-container">
+        <form id="login-form" class="auth-card">
+
+            <h2>Welcome Back</h2>
+            <p>Login to manage events or attend seamlessly</p>
+
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+
+            <select id="role-select" required>
+                <option value="">Select role</option>
+                <option value="attendee">Attendee</option>
+                <option value="organizer">Organizer</option>
+            </select>
+
+            <button type="submit">Login</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script>
+const scanner = new Html5Qrcode("preview");
+
+scanner.start(
+    { facingMode: "environment" },
+    { fps: 10, qrbox: 250 },
+    (qrText) => {
+        const scannedTicket = JSON.parse(qrText);
+        const storedTicket = JSON.parse(localStorage.getItem("ticket"));
+
+        if (storedTicket.ticketId === scannedTicket.ticketId &&
+            storedTicket.status === "unused") {
+
+            storedTicket.status = "used";
+            localStorage.setItem("ticket", JSON.stringify(storedTicket));
+
+            alert("✅ Ticket VALIDATED");
+        } else {
+            alert("❌ Invalid or already used ticket");
+        }
+
+        scanner.stop();
+    }
+);
+</script>

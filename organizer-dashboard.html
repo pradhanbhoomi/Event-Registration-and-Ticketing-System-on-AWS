@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organizer Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>🎟️ Event Platform — Organizer</h2>
+    <div id="nav-actions"></div>
+</nav>
+
+<div class="container">
+
+    <section class="dashboard-section">
+        <h3>Registered Attendees</h3>
+        <div id="registrations-container" class="grid"></div>
+    </section>
+
+    <section class="dashboard-section">
+        <h3>Ticket Validation</h3>
+
+        <div class="scanner-card">
+            <video id="qr-video"></video>
+            <p id="scan-result">Scan a QR ticket using camera</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- QR SCANNER LIBRARY -->
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+<!-- YOUR SCRIPT -->
+<script src="script.js"></script>
+</body>
+</html>
+
