@@ -18,9 +18,18 @@
 
     <h3>Your Ticket QR</h3>
     <div id="qr-container"></div>
+
+    <!-- ✅ HIDDEN INITIALLY -->
+    <button
+        id="download-btn"
+        class="download-btn"
+        style="display:none"
+        onclick="downloadTicket()">
+        Download Ticket (PDF)
+    </button>
 </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

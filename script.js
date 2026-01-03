@@ -127,6 +127,37 @@ if (window.location.pathname.includes("organizer-dashboard")) {
     fetchRegistrations();
 }
 
+
+
+function generateQR(eventId, eventName) {
+    const qrContainer = document.getElementById("qr-container");
+    if (!qrContainer) return;
+
+    qrContainer.innerHTML = "";
+
+    const ticket = JSON.stringify({
+        eventId,
+        eventName,
+        email: sessionStorage.getItem("userEmail"),
+        status: "unused"
+    });
+
+    new QRCode(qrContainer, {
+        text: ticket,
+        width: 180,
+        height: 180
+    });
+
+    // ✅ SHOW DOWNLOAD BUTTON AFTER REGISTRATION
+    const downloadBtn = document.getElementById("download-btn");
+    if (downloadBtn) {
+        downloadBtn.style.display = "block";
+    }
+}
+
+
+
+
 /*************************************************
  * LIVE QR SCANNER (CAMERA)
  *************************************************/
@@ -161,3 +192,5 @@ if (window.location.pathname.includes("organizer-dashboard")) {
         resultEl.innerText = "Camera access denied";
     });
 }
+
+
